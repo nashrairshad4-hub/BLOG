@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevPulse — Signals from the Software World</title>
+  <meta name="description" content="DevPulse is a modern developer blog covering AI, Web Development, Programming, Cyber Security, Mobile Apps, Career and Tutorials — written by engineers, for engineers." />
+  <meta name="keywords" content="developer blog, programming, web development, AI, cyber security, tutorials, career" />
+  <meta name="author" content="DevPulse" />
+  <meta name="theme-color" content="#0B0F19" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="DevPulse — Signals from the Software World" />
+  <meta property="og:description" content="A modern developer blog covering AI, Web Dev, Programming, Cyber Security, Mobile and Career." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ BACKGROUND SHAPES ============ -->
+  <div class="bg-shapes" aria-hidden="true">
+    <span class="shape shape-1"></span>
+    <span class="shape shape-2"></span>
+    <span class="shape shape-3"></span>
+    <span class="shape shape-4"></span>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="#home" class="logo" aria-label="DevPulse home">
+        <span class="logo-mark">&lt;/&gt;</span>
+        <span class="logo-text">Dev<em>Pulse</em></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active-link">Home</a>
+        <a href="#categories" class="nav-link">Categories</a>
+        <a href="#blog" class="nav-link">Blog</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="navbar-actions">
+        <button class="icon-btn" id="searchToggle" aria-label="Toggle search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark and light mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Expandable search bar -->
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <input type="text" id="searchInput" placeholder="Search articles, e.g. “React hooks”, “Zero Trust”…" />
+        <i class="fa-solid fa-xmark" id="closeSearch"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-copy reveal">
+        <span class="eyebrow"><i class="fa-solid fa-bolt"></i> Fresh signal, zero noise</span>
+        <h1>Where developers <span class="gradient-text">read what matters.</span></h1>
+        <p class="hero-desc">
+          DevPulse breaks down AI, web development, security and career shifts into short,
+          practical reads — written by engineers who ship, for engineers who build.
+        </p>
+        <div class="hero-actions">
+          <a href="#blog" class="btn btn-primary">
+            <span>Read Latest Articles</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#categories" class="btn btn-ghost">Browse Categories</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>320+</strong>
+            <span>Articles published</span>
+          </div>
+          <div class="stat">
+            <strong>48K</strong>
+            <span>Monthly readers</span>
+          </div>
+          <div class="stat">
+            <strong>8</strong>
+            <span>Core topics</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="glass-card code-card">
+          <div class="code-card-head">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="code-card-title">latest-pulse.ts</span>
+          </div>
+          <pre class="code-block"><code><span class="c-key">const</span> <span class="c-var">pulse</span> = {
+  <span class="c-prop">topic</span>: <span class="c-str">"Edge AI"</span>,
+  <span class="c-prop">reads</span>: <span class="c-num">12400</span>,
+  <span class="c-prop">trending</span>: <span class="c-bool">true</span>
+};
+
+<span class="c-key">export default</span> pulse;</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED ARTICLE ============ -->
+  <section class="section featured" id="featured">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Editor's Pick</span>
+        <h2>Featured Article</h2>
+      </div>
+
+      <article class="featured-card glass-card reveal">
+        <div class="featured-media">
+          <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1200&q=60" alt="Abstract visualization of a neural network representing artificial intelligence" loading="lazy" />
+          <span class="badge">Featured</span>
+        </div>
+        <div class="featured-body">
+          <span class="post-category cat-ai">AI</span>
+          <h3>How Small AI Models Are Quietly Outperforming Giant LLMs</h3>
+          <p>
+            Distillation, retrieval and clever fine-tuning are letting 3B-parameter models
+            match systems ten times their size on real developer tasks. Here's what changed,
+            and why your next side project might not need a giant API bill.
+          </p>
+          <div class="post-meta">
+            <img class="avatar" src="https://i.pravatar.cc/64?img=12" alt="Portrait of Maria Chen" loading="lazy" />
+            <div class="meta-text">
+              <span class="meta-author">Maria Chen</span>
+              <span class="meta-date">June 21, 2026 · 7 min read</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ BLOG + SIDEBAR ============ -->
+  <section class="section blog-section" id="blog">
+    <div class="container blog-layout">
+
+      <div class="blog-main">
+        <div class="section-head reveal">
+          <span class="section-tag">Fresh off the press</span>
+          <h2>Latest Blog Posts</h2>
+        </div>
+
+        <!-- Category filter chips -->
+        <div class="filter-bar reveal" id="filterBar">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="Technology">Technology</button>
+          <button class="chip" data-filter="AI">AI</button>
+          <button class="chip" data-filter="Web Development">Web Dev</button>
+          <button class="chip" data-filter="Programming">Programming</button>
+          <button class="chip" data-filter="Cyber Security">Security</button>
+          <button class="chip" data-filter="Mobile Apps">Mobile</button>
+          <button class="chip" data-filter="Career">Career</button>
+          <button class="chip" data-filter="Tutorials">Tutorials</button>
+        </div>
+
+        <div class="posts-grid" id="postsGrid"><!-- injected by script.js --></div>
+
+        <p class="no-results" id="noResults" hidden>No articles match your search. Try a different keyword.</p>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="blog-sidebar">
+        <div class="glass-card sidebar-card reveal">
+          <h3><i class="fa-solid fa-fire"></i> Trending Posts</h3>
+          <ul class="trending-list" id="trendingList"><!-- injected by script.js --></ul>
+        </div>
+
+        <div class="glass-card sidebar-card reveal newsletter-mini">
+          <h3><i class="fa-solid fa-paper-plane"></i> Weekly Digest</h3>
+          <p>One email, every Friday. No fluff.</p>
+          <form class="mini-form" data-mini-newsletter>
+            <input type="email" placeholder="you@example.com" required />
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- ============ CATEGORIES ============ -->
+  <section class="section categories" id="categories">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="section-tag">Explore by topic</span>
+        <h2>Categories</h2>
+        <p class="section-sub">Jump straight to the corner of the stack you care about.</p>
+      </div>
+
+      <div class="categories-grid reveal">
+        <div class="category-card" data-scroll-to="Technology">
+          <i class="fa-solid fa-microchip"></i>
+          <h4>Technology</h4>
+          <span>48 articles</span>
+        </div>
+        <div class="category-card" data-scroll-to="AI">
+          <i class="fa-solid fa-brain"></i>
+          <h4>Artificial Intelligence</h4>
+          <span>62 articles</span>
+        </div>
+        <div class="category-card" data-scroll-to="Web Development">
+          <i class="fa-solid fa-code"></i>
+          <h4>Web Development</h4>
+          <span>75 articles</span>
+        </div>
+        <div class="category-card" data-scroll-to="Programming">
+          <i class="fa-solid fa-terminal"></i>
+          <h4>Programming</h4>
+          <span>58 articles</span>
+        </div>
+        <div class="category-card" data-scroll-to="Cyber Security">
+          <i class="fa-solid fa-shield-halved"></i>
+          <h4>Cyber Security</h4>
+          <span>34 articles</span>
+        </div>
+        <div class="category-card" data-scroll-to="Mobile Apps">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          <h4>Mobile Apps</h4>
+          <span>29 articles</span>
+        </div>
+        <div class="category-card" data-scroll-to="Career">
+          <i class="fa-solid fa-briefcase"></i>
+          <h4>Career</h4>
+          <span>21 articles</span>
+        </div>
+        <div class="category-card" data-scroll-to="Tutorials">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h4>Tutorials</h4>
+          <span>40 articles</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="section newsletter-section">
+    <div class="container">
+      <div class="newsletter-card glass-card reveal">
+        <div class="newsletter-copy">
+          <h2>Get the pulse in your inbox.</h2>
+          <p>Join 12,000+ developers getting one honest, no-fluff email every week.</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <div class="input-wrap">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" id="newsletterEmail" placeholder="Enter your email address" required />
+          </div>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="form-msg" id="newsletterMsg" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTHOR ============ -->
+  <section class="section author" id="about">
+    <div class="container author-inner">
+      <div class="author-visual reveal">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=60" alt="Portrait of Ayesha Raza, founder and lead editor of DevPulse" loading="lazy" />
+      </div>
+      <div class="author-copy reveal">
+        <span class="section-tag">Behind DevPulse</span>
+        <h2>Written by engineers who'd rather ship than hype.</h2>
+        <p>
+          I'm <strong>Ayesha Raza</strong>, a backend engineer turned editor. DevPulse started
+          as a personal changelog of things I learned the hard way — now it's a small team of
+          working developers writing the articles we wish existed when we were stuck.
+        </p>
+        <div class="author-socials">
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" aria-label="Dev.to"><i class="fa-brands fa-dev"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="section-tag">Reader feedback</span>
+        <h2>What readers say</h2>
+      </div>
+
+      <div class="testimonials-grid reveal">
+        <div class="testimonial-card glass-card">
+          <i class="fa-solid fa-quote-left quote-icon"></i>
+          <p>DevPulse is the only newsletter I actually open on a Friday night. The security breakdowns saved my team a painful audit.</p>
+          <div class="testimonial-person">
+            <img src="https://i.pravatar.cc/64?img=32" alt="Portrait of Daniel Osei" loading="lazy" />
+            <div>
+              <strong>Daniel Osei</strong>
+              <span>Senior Backend Engineer</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card glass-card">
+          <i class="fa-solid fa-quote-left quote-icon"></i>
+          <p>Practical, short, and never clickbait. The tutorials series took me from "I get React" to "I actually understand React."</p>
+          <div class="testimonial-person">
+            <img src="https://i.pravatar.cc/64?img=45" alt="Portrait of Lina Torres" loading="lazy" />
+            <div>
+              <strong>Lina Torres</strong>
+              <span>Frontend Developer</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card glass-card">
+          <i class="fa-solid fa-quote-left quote-icon"></i>
+          <p>The career column alone helped me negotiate a 20% raise. Genuinely one of the few tech blogs worth a subscription.</p>
+          <div class="testimonial-person">
+            <img src="https://i.pravatar.cc/64?img=51" alt="Portrait of Samuel Okafor" loading="lazy" />
+            <div>
+              <strong>Samuel Okafor</strong>
+              <span>Engineering Manager</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section faq">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="section-tag">Good to know</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-list reveal" id="faqList">
+        <div class="faq-item">
+          <button class="faq-question">
+            How often do you publish new articles?
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="faq-answer">
+            <p>We publish 3–4 new articles per week across our eight core categories, plus a weekly digest every Friday summarizing the best reads from around the web.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I contribute an article as a guest writer?
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! We welcome guest posts from working developers. Use the contact form below with a short pitch and a writing sample, and our editorial team will get back to you within a week.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Is the newsletter really free?
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Completely free, no catch. We keep the lights on through sponsored placements that are clearly labelled and never mixed with editorial content.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Do you cover beginner-friendly topics?
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely — our Tutorials category is written specifically for people early in their journey, with no assumed background beyond basic programming logic.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="container contact-layout">
+      <div class="contact-copy reveal">
+        <span class="section-tag">Let's talk</span>
+        <h2>Have a story, tip, or question?</h2>
+        <p>Whether it's a correction, a pitch, or just feedback — we read every message.</p>
+        <ul class="contact-info">
+          <li><i class="fa-solid fa-envelope"></i> hello@devpulse.io</li>
+          <li><i class="fa-solid fa-location-dot"></i> Remote-first, worldwide</li>
+          <li><i class="fa-solid fa-clock"></i> We reply within 2 business days</li>
+        </ul>
+      </div>
+
+      <form class="contact-form glass-card reveal" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cName">Full Name</label>
+            <input type="text" id="cName" placeholder="Jane Doe" required />
+            <span class="error-msg"></span>
+          </div>
+          <div class="form-group">
+            <label for="cEmail">Email Address</label>
+            <input type="email" id="cEmail" placeholder="jane@example.com" required />
+            <span class="error-msg"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="cSubject">Subject</label>
+          <input type="text" id="cSubject" placeholder="Guest post idea, bug report, etc." required />
+          <span class="error-msg"></span>
+        </div>
+        <div class="form-group">
+          <label for="cMessage">Message</label>
+          <textarea id="cMessage" rows="5" placeholder="Tell us what's on your mind..." required></textarea>
+          <span class="error-msg"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          Send Message <i class="fa-solid fa-paper-plane"></i>
+        </button>
+        <p class="form-msg" id="contactMsg" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-mark">&lt;/&gt;</span>
+          <span class="logo-text">Dev<em>Pulse</em></span>
+        </a>
+        <p>Practical developer writing on AI, web, security and career — published weekly, respected always.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#categories">AI</a></li>
+          <li><a href="#categories">Web Development</a></li>
+          <li><a href="#categories">Cyber Security</a></li>
+          <li><a href="#categories">Career</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-newsletter">
+        <h4>Stay in the loop</h4>
+        <p>No spam. Unsubscribe anytime.</p>
+        <form class="mini-form" data-mini-newsletter>
+          <input type="email" placeholder="you@example.com" required />
+          <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span id="year"></span> DevPulse. All rights reserved.</p>
+        <p>Designed &amp; built with <i class="fa-solid fa-heart"></i> as a frontend portfolio project.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
